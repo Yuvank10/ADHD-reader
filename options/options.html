@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ADHD Reader Options</title>
+		<link rel="stylesheet" href="options.css" />
+	</head>
+	<body>
+		<main class="page">
+			<header class="hero">
+				<div class="hero-copy">
+					<p class="eyebrow">ADHD Reader</p>
+					<h1>Options</h1>
+					<p class="subhead">Tune the blocklist, accent color, and font size used by bionic reading.</p>
+				</div>
+				<div class="hero-badge" aria-hidden="true">
+					<span>AD</span>
+				</div>
+			</header>
+
+			<section class="panel">
+				<label class="field" for="blocklist">
+					<span class="field-title">Site blocklist</span>
+					<textarea id="blocklist" rows="6" placeholder="www.xyz.com"></textarea>
+					<small>One domain per line. Matching sites will be left untouched.</small>
+				</label>
+
+				<div class="grid">
+					<label class="field">
+						<span class="field-title">Bionic color</span>
+						<div class="color-row">
+							<input id="bionicColor" type="color" value="#ef6c4c" />
+							<span id="bionicColorValue">#ef6c4c</span>
+						</div>
+						<small>Controls the emphasized part of each word.</small>
+					</label>
+
+					<label class="field">
+						<span class="field-title">Base font size</span>
+						<div class="slider-labels">
+							<span>Preview size</span>
+							<span id="fontSizeValue">18px</span>
+						</div>
+						<input id="fontSize" type="range" min="14" max="24" value="18" />
+						<small>Adjusts how large the page text feels.</small>
+					</label>
+				</div>
+			</section>
+
+			<div class="actions">
+				<button id="save" type="button">Save settings</button>
+				<p id="status" class="status" aria-live="polite"></p>
+			</div>
+		</main>
+		<script src="options.js"></script>
+	</body>
+</html>

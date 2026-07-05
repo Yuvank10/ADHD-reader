@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ADHD Reader</title>
+		<link rel="stylesheet" href="popup.css" />
+	</head>
+	<body>
+		<main class="popup">
+			<header class="hero">
+				<div class="hero-copy">
+					<p class="eyebrow">ADHD Reader</p>
+					<h1>Bionic reading</h1>
+					<p class="subhead">Emphasize the first half of each word so pages feel lighter and faster to scan.</p>
+				</div>
+				<div class="hero-badge" aria-hidden="true">
+					<span>AD</span>
+				</div>
+			</header>
+
+			<section class="panel">
+				<label class="toggle-row" for="enabledToggle">
+					<input id="enabledToggle" type="checkbox" />
+					<span>
+						<strong>Enable on this browser</strong>
+						<small>Turns bionic reading on or off instantly.</small>
+					</span>
+				</label>
+
+				<label class="slider-row" for="boldRatio">
+					<div class="slider-labels">
+						<span>Bold split</span>
+						<span id="ratioValue">50%</span>
+					</div>
+					<input id="boldRatio" type="range" min="40" max="70" value="50" />
+					<small>Lower keeps more of each word regular. Higher bolds more of the word.</small>
+				</label>
+			</section>
+
+			<div class="actions">
+				<button id="openOptions" type="button">Open options</button>
+				<p class="status" id="status" aria-live="polite"></p>
+			</div>
+		</main>
+		<script src="popup.js"></script>
+	</body>
+</html>
